@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Noto+Sans+TC:wght@400;500;700&display=swap');
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* navbar */
+  .navbar {
+    right: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    padding: 16px 8px;
+  }
+
+  .title {
+    font-family: 'Acme', sans-serif;
+    font-size: 32px;
+    white-space: nowrap;
+  }
+  
+  .navbar i {
+    margin-right: 8px;
+    font-size: 2rem;
+  }
+
+  .navbar a, .footer a {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 16px;
+    text-decoration: none;
+    color: #F50057;
+  }
+  
+  .right-navbar .active {
+    border-bottom: 2px solid #F50057;
+  }
+  
+  /* header */
+  .header {
+    background-image: url(https://images.unsplash.com/photo-1533484371200-0d5b6312a939?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80);
+    background-size: cover;
+    margin-bottom: 48px;
+    padding: 100px 0;
+    height: 350px;
+  }
+  
+  .header h2 {
+    line-height: 1.5;
+    color: white;
+    padding: 32px 24px;
+  }
+  
+  /* content START */
+  /* intro */
+  .intro {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+  }
+  
+  .intro .card {
+    width: 26%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 32px 24px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  .intro .card img {
+    height: 140px;
+    margin-bottom: 16px;
+  }
+  
+  .intro .card .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .intro .card .card-detail {
+    line-height: 2;
+    text-align: justify;
+  }
+  
+  .intro .card ul {
+    line-height: 1.5;
+    list-style-type: disc;
+    text-align: left;
+    margin-left: 16px;
+  }
+  
+  /* compare */
+  .compare h2 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 24px auto;
+  }
+  
+  .compare table {
+    width: 80%;
+    margin: 0 auto 64px;
+  }
+  
+  .compare table thead td {
+    font-weight: 700;
+    background-color: #eee;
+    border-top: 1px solid #ccc;
+  }
+  
+  .compare tr {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .compare tr td {
+    padding: 10px 16px;
+  }
+  
+  .compare table .highlighted {
+    color: #F50057;
+  }
+  
+  /* subscribe */
+  .subscribe {
+    background-color: #c75380;
+    color: #fff;
+    padding: 24px 16px;
+  }
+  
+  .subscribe h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .subscribe .subscribe-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .subscribe .subscribe-info img,
+  .subscribe .subscribe-info form {
+    display: block;
+    width: 48%;
+  }
+  
+  .subscribe .subscribe-info form label {
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .subscribe .subscribe-info form input {
+    box-sizing: border-box; /* 解決input溢出問題 */
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .submit {
+    text-align: right;
+  }
+  
+  .submit button {
+    background-color: #F50057;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+  }
+  
+  .submit button:hover {
+    filter: brightness(120%);
+  }
+  
+  /* content END */
+  
+  /* footer */
+  .footer {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .footer p {
+    line-height: 1.5;
+    text-align: left;
+    margin: 20px 0;
+  }
+
+  .footer .copyright {
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 16px 0;
+  }
+
+  .contact a {
+    color: #F50057;
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    color: cyan;
+  }
+  
+  /* RWD */
+  @media (max-width: 992px) {
+    .intro .card img {
+      height: 5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .intro, .contact {
+      display: block;
+    }
+    .intro .card {
+      width: 60%;
+      margin: 0 auto 30px;
+    }
+    .intro .card img {
+      height: 7rem;
+    }
+    .right-navbar a {
+      font-size: 16px;
+    }
+    .footer .copyright {
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header h2 {
+      font-size: 1.75rem;
+    }
+    .intro .card img {
+      height: 5rem;
+    }
+    .subscribe .subscribe-info {
+      display: block;
+    }
+    .subscribe .subscribe-info img {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 24px;
+    }
+    .subscribe .subscribe-info form {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+  
